@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-cinzel: 'Cinzel', serif;
+    --font-italiana: 'Italiana', serif;
+    --font-sans: 'Plus Jakarta Sans', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-script: 'Great Vibes', cursive;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #050104;
+    color: #fce7eb;
+    letter-spacing: -0.01em;
+  }
+
+  /* Custom romantic scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080205;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3b0c1e;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #be185d;
+  }
+}
+
+.font-serif-romance {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-italiana {
+  font-family: 'Italiana', serif;
+}
+
+.font-script-romance {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-sans-romance {
+  font-family: var(--font-sans);
+}
+
+/* Atmospheric glow helper classes */
+.romantic-glow {
+  box-shadow: 0 0 60px -10px rgba(225, 29, 72, 0.25), 0 0 25px -5px rgba(244, 63, 94, 0.2);
+}
+
+.gold-glow {
+  box-shadow: 0 0 50px -8px rgba(245, 158, 11, 0.25), 0 0 20px -5px rgba(251, 191, 36, 0.2);
+}
+
+.romantic-card-border {
+  border: 1px solid rgba(244, 114, 182, 0.12);
+  background: radial-gradient(circle at top left, rgba(76, 12, 33, 0.35), rgba(16, 4, 11, 0.9));
+}
+
+/* Shimmer gradient text */
+.text-shimmer-gold {
+  background: linear-gradient(135deg, #fff7ed 0%, #fde68a 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-shimmer-rose {
+  background: linear-gradient(135deg, #ffffff 0%, #fecdd3 40%, #fb7185 80%, #f43f5e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Film grain subtle overlay */
+.bg-film-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 7s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
